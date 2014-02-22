@@ -1,6 +1,6 @@
 # Skeleton is a Python Flask template.
 
-It is a simple [Flask](http://flask.pocoo.org/) application with [Twitter Bootstrap](http://getbootstrap.com/) and other front end development utilities. Flask enables [Less](http://www.lesscss.org/) and [Coffeescript](http://coffeescript.org/) asset compilation through [webassets](http://webassets.readthedocs.org/en/latest/) and Twitter Bootstrap is included for fast frontend development.
+It is a simple [Flask](http://flask.pocoo.org/) application with [Semantic UI](http://semantic-ui.com/) and other front end development utilities. Flask enables [Less](http://www.lesscss.org/) and [Coffeescript](http://coffeescript.org/) asset compilation through [webassets](http://webassets.readthedocs.org/en/latest/) and Twitter Bootstrap is included for fast frontend development.
 
 
 ## Installation
@@ -141,10 +141,8 @@ This software is licensed under the MIT License. See LICENSE for details.
 
 Following libraries are used:
 
-- ### [Twitter Bootstrap](https://github.com/twbs/bootstrap)
-
-    Copyright 2012 Twitter, Inc.
-    Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+- ### [Semantic UI](http://semantic-ui.com/)
+    Licensed under the [MIT License](https://github.com/Semantic-Org/Semantic-UI/blob/master/LICENSE.md)
 
 - ### [Font Awesome](http://fortawesome.github.com/Font-Awesome)
 
