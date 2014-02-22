@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block head %}
-	{{ super() }}
+  {{ super() }}
 {% endblock %}
 {% block content %}
-<article>
+  <div>
 	<h1>{{ config.APP_NAME }}</h1>
     <img class="logo" src="/static/img/logo.png" alt="Logo">
     <div class="listing">
 		<p>No items yet.</p>
     </div>
-</article>
+  </div>
 {% endblock %}
