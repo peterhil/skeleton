@@ -27,6 +27,11 @@ class Default(object):
     API_SERVER = 'localhost:5000'
     API_TOKEN = 'some-api-token'
 
+    # Flat pages
+    FLATPAGES_ROOT = 'pages/flat'
+    FLATPAGES_EXTENSION = '.md'
+    FLATPAGES_MARKDOWN_EXTENSIONS = []
+
 
 class Dev(Default):
     DEBUG = True
