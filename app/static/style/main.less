@@ -1,0 +1,27 @@
+//
+// Styles
+// --------------------------------------------------
+
+@bootstrap-less-dir: "../vendor/bootstrap/less";
+
+// Include Bootstrap from here to be able to use mixins and variables
+@import "@{bootstrap-less-dir}/bootstrap.less";
+
+// Custom theme
+@import "bootstrap/theme.less";
+
+#notifications {
+    .growl {
+        z-index: 3000;
+        top: 70px;
+    }
+    &.in-page .growl {
+        position: static;
+        width: 100%;
+        float: none;
+    }
+
+    .growl-container > .growl-item {
+        background-position: center;
+    }
+}
