@@ -14,8 +14,8 @@ from setuptools import setup, Command
 PACKAGE_NAME = 'skeleton'
 PACKAGE_VERSION = '0.1.0'
 PACKAGES = ['app']
-INSTALL_REQS = [str(ir.req) for ir in parse_requirements('requirements/stable.pip')]
-TEST_REQS = [str(ir.req) for ir in parse_requirements('requirements/dev.pip')]
+INSTALL_REQS = [str(ir.req) for ir in parse_requirements('requirements/stable.pip', session='skeleton')]
+TEST_REQS = [str(ir.req) for ir in parse_requirements('requirements/dev.pip', session='skeleton')]
 
 with open('README.md', 'r') as readme:
     README_TEXT = readme.read()
