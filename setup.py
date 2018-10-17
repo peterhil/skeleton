@@ -8,14 +8,21 @@
 # file that was distributed with this source code.
 
 from __future__ import with_statement
-from pip.req import parse_requirements
 from setuptools import setup, Command
 
+def parse_requirements(filename):
+    """
+    Load requirements from a pip requirements file
+    """
+    lineiter = (line.strip() for line in open(filename))
+    return [line for line in lineiter if line and not (line.startswith("#") or line.startswith("-"))]
+
 PACKAGE_NAME = 'skeleton'
-PACKAGE_VERSION = '0.1.0'
+PACKAGE_VERSION = '0.2.0'
 PACKAGES = ['app']
-INSTALL_REQS = [str(ir.req) for ir in parse_requirements('requirements/stable.pip')]
-TEST_REQS = [str(ir.req) for ir in parse_requirements('requirements/dev.pip')]
+INSTALL_REQS = [str(req) for req in parse_requirements('requirements/stable.pip')]
+TEST_REQS = [str(req) for req in parse_requirements('requirements/dev.pip')]
+
 
 with open('README.md', 'r') as readme:
     README_TEXT = readme.read()
