@@ -23,7 +23,7 @@
     <![endif]-->
     {%- endblock %}
   </head>
-  <body role="document">
+  <body ng-app="app" role="document">
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -45,7 +45,8 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div id="notifications" class="container"></div>
+    <div growl="true" id="notifications" class="container in-page">
+    </div>
     <div id="content" class="container" role="main">
       {% block content %}{% endblock %}
     </div>

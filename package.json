@@ -1,32 +1,28 @@
 {
-    "name": "skeleton",
-    "description": "Skeleton.",
-    "version": "0.2.0",
-    "keywords": [
-        "python",
-        "flask",
-        "app template"
-    ],
-    "homepage": "https://github.com/peterhil/skeleton",
-    "author": "Peter Hillerström <peter.hillerstrom@gmail.com>",
-    "scripts": {
-        "prestart": "cd ./node_modules/modernizr && ./bin/modernizr -c ../../modernizr-config.json && cd -",
-        "start": "source ./activate && python run.py"
-    },
-    "private": true,
-    "dependencies": {
-        "jquery": "^3.3.1",
-        "lodash": "^4.17.11",
-        "modernizr": "~3.6.0",
-        "twitter-bootstrap-3.0.0": ">=3.0.0"
-    },
-    "devDependencies": {
-        "coffee-script": "~1.6.3",
-        "less": "^3.8.1",
-        "uglify-js": "^3.4.9"
-    },
-    "optionalDependencies": {},
-    "engines": {
-        "node": "==0.11.7"
-    }
+  "name": "skeleton",
+  "description": "Skeleton.",
+  "version": "0.2.0",
+  "keywords": [
+    "python",
+    "flask",
+    "app template"
+  ],
+  "homepage": "https://github.com/peterhil/skeleton",
+  "author": "Peter Hillerström <peter.hillerstrom@gmail.com>",
+  "scripts": {
+    "prestart": "cd ./node_modules/modernizr && ./bin/modernizr -c ../../modernizr-config.json && cd -",
+    "start": "source ./activate && python run.py"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^4.0.0",
+    "coffee-script": "~1.6.3",
+    "less": "^3.8.1",
+    "uglify-js": "^3.4.9"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "==0.11.7"
+  }
 }

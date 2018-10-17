@@ -5,14 +5,14 @@ from flask.ext.assets import Environment, Bundle
 
 
 css_application = Bundle(
-    'less/main.less',
-    filters='less',
+    'style/main.less',
+    filters='less,autoprefixer',
     debug=False,
     output='gen/app.css'
 )
 
 css_all = Bundle(
-    # 'vendor/some/library.css',
+    'vendor/angular-growl-v2/build/angular-growl.css',
     css_application,
     filters='cssmin',
     output='gen/app.min.css'
@@ -20,30 +20,34 @@ css_all = Bundle(
 
 js_vendor = Bundle(
     'vendor/jquery/dist/jquery.js',
+    'vendor/angular/angular.js',
+    'vendor/angular-animate/angular-animate.js',
+    'vendor/angular-aria/angular-aria.js',
+    'vendor/angular-cookies/angular-cookies.js',
+    'vendor/angular-messages/angular-messages.js',
+    'vendor/angular-resource/angular-resource.js',
+    'vendor/angular-route/angular-route.js',
+    'vendor/angular-sanitize/angular-sanitize.js',
+    'vendor/angular-touch/angular-touch.js',
+    'vendor/angular-growl-v2/build/angular-growl.js',
+    'vendor/bootstrap/dist/js/bootstrap.js',
     'vendor/lodash/lodash.js',
     # 'vendor/modernizr/modernizr.js', # TODO Customize this
-    'vendor/twitter-bootstrap-3.0.0/dist/js/bootstrap.js',
     filters='uglifyjs',
     output='gen/vendor.min.js'
 )
 
 js_ie = Bundle(
-    'vendor/twitter-bootstrap-3.0.0/assets/js/html5shiv.js',
-    'vendor/twitter-bootstrap-3.0.0/assets/js/respond.min.js',
+    'vendor/es5-shim/es5-shim.js',
     filters='uglifyjs',
     output='gen/ie.min.js'
 )
 
 js_main = Bundle(
-    'libs/ba-debug.js',
     Bundle(
-        'coffee/app.coffee',
-        'coffee/init.coffee',  # Must be loaded after app.coffee but before anything else.
-        'coffee/notify.coffee',
-        'coffee/ajax.coffee',
-        'coffee/singleton.coffee',
-        'coffee/service/api-service.coffee',
-        'coffee/listing.coffee',
+        'script/app.coffee',
+        'script/service/config.coffee',
+        'script/controller/listing.coffee',
         filters='coffeescript',
         output='gen/app.js'
     ),
