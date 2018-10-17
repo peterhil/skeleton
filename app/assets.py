@@ -21,7 +21,7 @@ css_all = Bundle(
 js_vendor = Bundle(
     'vendor/dustjs-linkedin/dist/dust-full.js',
     'vendor/jquery/dist/jquery.js',
-    'vendor/lodash/dist/lodash.js',
+    'vendor/lodash/lodash.js',
     # 'vendor/modernizr/modernizr.js', # TODO Customize this
     'vendor/twitter-bootstrap-3.0.0/dist/js/bootstrap.js',
     filters='uglifyjs',

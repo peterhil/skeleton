@@ -15,12 +15,12 @@
     },
     "private": true,
     "dependencies": {
-        "twitter-bootstrap-3.0.0": ">=3.0.0",
         "dustjs-linkedin": "~2.3.4",
         "dusty": "~0.1.1",
         "jquery": "~2.1.0",
-        "lodash": "~2.4.1",
-        "modernizr": "~3.6.0"
+        "lodash": "^4.17.11",
+        "modernizr": "~3.6.0",
+        "twitter-bootstrap-3.0.0": ">=3.0.0"
     },
     "devDependencies": {
         "coffee-script": "~1.6.3",
