@@ -2,7 +2,11 @@
     "name": "skeleton",
     "description": "Skeleton.",
     "version": "0.0.0",
-    "keywords": ["python", "flask", "app template"],
+    "keywords": [
+        "python",
+        "flask",
+        "app template"
+    ],
     "homepage": "https://github.com/peterhil/skeleton",
     "author": "Peter Hillerström <peter.hillerstrom@gmail.com>",
     "scripts": {
@@ -11,7 +15,7 @@
     },
     "private": true,
     "dependencies": {
-        "twitter-bootstrap-3.0.0" : ">=3.0.0",
+        "twitter-bootstrap-3.0.0": ">=3.0.0",
         "dustjs-linkedin": "~2.3.4",
         "dusty": "~0.1.1",
         "jquery": "~2.1.0",
