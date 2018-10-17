@@ -36,7 +36,7 @@ js_ie = Bundle(
 )
 
 js_dust = Bundle(
-    'dust/listing.dust',
+    'dust/',
     filters='dustjs',
     output='gen/templates.js',
 )
