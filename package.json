@@ -10,7 +10,7 @@
     "homepage": "https://github.com/peterhil/skeleton",
     "author": "Peter Hillerström <peter.hillerstrom@gmail.com>",
     "scripts": {
-        "prestart": "cd app/frontend/static/vendor/modernizr && ./bin/modernizr >/dev/null && cd -",
+        "prestart": "cd ./node_modules/modernizr && ./bin/modernizr -c ../../modernizr-config.json && cd -",
         "start": "source ./activate && python run.py"
     },
     "private": true,
@@ -20,7 +20,7 @@
         "dusty": "~0.1.1",
         "jquery": "~2.1.0",
         "lodash": "~2.4.1",
-        "modernizr": "git+https://github.com/Modernizr/Modernizr#master"
+        "modernizr": "~3.6.0"
     },
     "devDependencies": {
         "coffee-script": "~1.6.3",
