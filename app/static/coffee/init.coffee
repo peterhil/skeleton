@@ -5,6 +5,7 @@ app = {}
 # Use mustache style {{}} template delimiters
 _.templateSettings = {
     'escape': /{{([\s\S]+?)}}/g,
+    'evaluate': /{%([\s\S]+?)%}/g,
     'interpolate': /{{{([\s\S]+?)}}}/g
 };
 

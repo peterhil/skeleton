@@ -2,6 +2,9 @@ class Listing
     constructor: (container) ->
         @data = []
         @elem = $(container).text('Loading...')
+        @template = '''<div class="item">
+    <p><a href="{{ url }}">{{ url }}</a></p>
+</div>'''
         @url = app.apiUrl() + '/api/v1/items'
         app.ajax(@url)
             .done (data) =>
@@ -15,11 +18,13 @@ class Listing
             @data = []
             return false
 
-        dust.render 'listing', data, (err, out) =>
-            unless err
-                @elem.html(out)
-            else
-                debug.error "Error:", err
+        # Ugly hack for now to get rid of DustJS
+        out = _.join(_.map(
+            data.items,
+            (item) =>
+                _.template(@template)({url: item.url})), "\n")
+
+        @elem.html(out)
 
 
 if $('.listing').length > 0

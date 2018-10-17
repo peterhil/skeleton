@@ -15,8 +15,6 @@
     },
     "private": true,
     "dependencies": {
-        "dustjs-linkedin": "^2.3.6",
-        "dusty": "^0.1.1",
         "jquery": "~2.1.0",
         "lodash": "^4.17.11",
         "modernizr": "~3.6.0",
