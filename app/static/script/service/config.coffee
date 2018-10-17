@@ -4,13 +4,16 @@ angular.module('app')
   .factory 'config', ['$http', '$log', ($http, $log) ->
     @config = {}
 
-    # TODO Use Gulp to generate config.js
+    success = (response) =>
+      $log.debug 'Configuration loaded.'
+      @config = response
+
+    fail = (response) ->
+      $log.error 'Could not load configuration!'
+
+    # TODO Use a build tool to generate config.js?
     $http.get('/config.json', {async: false, cache: true})
-      .success (response) =>
-        $log.debug 'Configuration loaded.'
-        @config = response
-      .error (response) ->
-        $log.error 'Could not load configuration!'
+      .then(success, fail)
 
     get: =>
       @config
