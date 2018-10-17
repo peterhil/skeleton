@@ -45,7 +45,6 @@ Command `port` refers to using Macports on Mac OS X. If you are using a differen
     sudo easy_install pip
     sudo pip install virtualenv
     sudo port install node  # <-- replace port with the command for your package manager
-    sudo npm install -g bower
     sudo npm install -g less
     sudo npm install -g grunt-cli
 
@@ -69,7 +68,6 @@ Command `port` refers to using Macports on Mac OS X. If you are using a differen
 
     cd skeleton-git
     npm install
-    bower install
     cd app/static/vendor/modernizr && ./bin/modernizr >/dev/null && cd -
 
 ### 6. Start the app
